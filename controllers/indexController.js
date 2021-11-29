@@ -9,22 +9,7 @@ const indexController = {
         res.sendFile(path.join(__dirname,"..","formulario.html"));
     },
     create: async (req,res)=>{
-        /* try{
-            let response = await fetch("http://127.0.0.1:3031/api/movies/create",
-            {
-                headers: {
-                  'Accept': 'application/json',
-                  'Content-Type': 'application/json'
-                },
-                method: "POST",
-                body: JSON.stringify(req.body)
-            });
-            let result = await response.json();
-            console.log(result);
-            return res.redirect("/movies");
-        }catch(error){
-            console.log(error);
-        } */
+        
     },
     update: (req,res)=>{
         res.sendFile(path.join(__dirname,"..","formulario.html"));
@@ -32,6 +17,9 @@ const indexController = {
     destroy: (req,res)=>{
 
     },
+    favoritas: (req,res)=>{
+        res.sendFile(path.join(__dirname,"..","favoritas.html"));
+    }
 
 }
 module.exports = indexController;

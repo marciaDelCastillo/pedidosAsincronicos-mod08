@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const indexController = require('../controllers/indexController');
 router.get('/', indexController.list);
+router.get("/favoritas", indexController.favoritas);
 router.get('/detail/:id', indexController.detail);
 router.get('/create', indexController.detail);
 router.post('/create', indexController.create);
